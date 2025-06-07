@@ -49,8 +49,8 @@ export default function Projects() {
     {
       title: 'Portfolio Website (Node.js + React + MongoDB)',
       description: 'Full-stack dynamic portfolio website with backend for content management and secure user interactions.',
-      link: '/projects/portfolio-website',
-      technologies: ['Node.js', 'React', 'MongoDB'],
+      link: 'https://github.com/RUGU2211/rugved-techfolio',
+      technologies: ['JavaScript (62.5%)', 'CSS (30.4%)', 'MDX (4.3%)', 'GLSL (2.5%)', 'HTML (0.3%)'],
     },
   ];
 
