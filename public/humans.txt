@@ -1,0 +1,28 @@
+__  __  __
+\ \ \ \ \/
+ \ \/\ \
+  \/  \/
+
+The humans.txt file explains the team, technology,
+and graphic assets behind this site humanstxt.org.
+
+_______________________________________________________________________________
+
+/* TEAM */
+  Name: Rugved Manoj Kharde
+  From: Kalyan, India
+  Currently: Pursuing MCA at NMIMS Mumbai
+
+/* SITE */
+  Last update: 2024/06/05
+  Standards: HTML5, CSS3, ES6+
+
+/* TECHNOLOGIES */
+  Built with: Remix, React, Node.js, Spring Boot, MongoDB
+  Languages: Java, Python, JavaScript, CSS, HTML
+  Tools: Git
+
+/* CONTACT */
+  Email: rugvedkharde2211@gmail.com
+  GitHub: https://github.com/RUGU2211
+  LinkedIn: https://linkedin.com/in/rugved-kharde-814b89282

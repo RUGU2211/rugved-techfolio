@@ -1,0 +1,192 @@
+@layer page {
+  .aboutPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space4XL) var(--spaceOuter);
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background);
+    overflow-x: hidden;
+  }
+
+  .sectionHeading {
+    font-size: var(--fontSize5XL);
+    font-weight: var(--fontWeightMedium);
+    color: var(--text);
+    margin-bottom: var(--space3XL);
+    position: relative;
+    padding-bottom: var(--spaceS);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+  }
+
+  .sectionHeading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+  }
+
+  .aboutPage:hover .sectionHeading::after {
+    width: 100%;
+  }
+
+  .aboutLayout {
+    display: flex;
+    gap: var(--space3XL);
+    width: 100%;
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin-top: var(--spaceL);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+    align-items: flex-start; /* Align items to the top */
+  }
+
+  .aboutTextColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spaceM); /* Space between text paragraphs */
+  }
+
+  .aboutImageColumn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align image to the top */
+  }
+
+  .aboutImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--borderRadius);
+    box-shadow: var(--boxShadow);
+  }
+
+  .aboutText {
+    font-size: var(--fontSizeL);
+    color: var(--textSecondary);
+    line-height: 1.6;
+    /* margin-bottom handled by gap in parent */
+  }
+
+  .resumeLink {
+    display: inline-block;
+    margin-top: var(--spaceM); /* Space above the link */
+    padding: var(--spaceS) var(--spaceM);
+    background-color: var(--accent);
+    color: var(--buttonText);
+    text-decoration: none;
+    border-radius: var(--borderRadius);
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Align link to the start in the flex column */
+  }
+
+  .resumeLink:hover {
+    background-color: var(--accentDark);
+  }
+
+  /* Animations */
+  @keyframes fadeInSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Add initial transform for fade up effect */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .aboutLayout {
+      flex-direction: column;
+      gap: var(--spaceL);
+      max-width: 800px;
+      align-items: center; /* Center items when stacked */
+    }
+
+    .aboutTextColumn {
+      gap: var(--spaceS);
+    }
+
+    .aboutImageColumn {
+      align-items: center; /* Center image when stacked */
+    }
+
+    .resumeLink {
+      align-self: center; /* Center link when stacked */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .aboutPage {
+      padding: var(--space2XL) var(--spaceL);
+    }
+
+    .sectionHeading {
+      font-size: var(--fontSize4XL);
+      text-align: center;
+      width: 100%;
+    }
+
+    .sectionHeading::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .aboutLayout {
+      margin-top: var(--spaceM);
+    }
+
+    .aboutText {
+      font-size: var(--fontSizeM);
+    }
+
+    .resumeLink {
+      margin-top: var(--spaceM);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .aboutPage {
+      padding: var(--spaceXL) var(--spaceM);
+    }
+
+    .sectionHeading {
+      font-size: var(--fontSize3XL);
+    }
+
+    .aboutLayout {
+      gap: var(--spaceS);
+    }
+
+    .aboutText {
+      font-size: var(--fontSizeS);
+    }
+
+    .resumeLink {
+      padding: var(--spaceXS) var(--spaceS);
+    }
+  }
+} 
