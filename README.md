@@ -6,10 +6,10 @@ A **modern, responsive portfolio website** to showcase my projects, skills, and 
 
 ## 🚀 Features
 
-# ✅ **Responsive Design** — Works beautifully on mobile, tablet, and desktop.
-# ✅ **Theme Toggle** — Light and dark mode for user preference.
-# ✅ **Project Gallery** — Clean layout to highlight projects with descriptions and tech stacks.
-# ✅ **Smooth Interactions** — Subtle animations and transitions for an engaging experience.
+ ✅ **Responsive Design** — Works beautifully on mobile, tablet, and desktop.
+ ✅ **Theme Toggle** — Light and dark mode for user preference.
+ ✅ **Project Gallery** — Clean layout to highlight projects with descriptions and tech stacks.
+ ✅ **Smooth Interactions** — Subtle animations and transitions for an engaging experience.
 
 ---
 
