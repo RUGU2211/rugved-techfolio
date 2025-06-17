@@ -46,16 +46,17 @@
 }
 
 .projectCard {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--backgroundSecondary);
-  padding: var(--spaceL);
-  border-radius: 12px;
-  border: 1px solid var(--colorTextInputBorder);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex !important;
+  flex-direction: column !important;
+  background-color: var(--background) !important;
+  background: var(--background) !important;
+  padding: var(--spaceL) !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--colorTextInputBorder) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+  text-decoration: none !important;
+  color: var(--text) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.7s cubic-bezier(0.4, 0, 0.2, 1) !important;
   opacity: 0;
   transform: translateY(40px) scale(0.98);
   animation: fadeInPopUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
@@ -73,16 +74,18 @@
   height: 100%;
   background: linear-gradient(45deg,
     transparent,
-    color-mix(in srgb, var(--text) 5%, transparent),
+    rgba(0, 0, 0, 0.05),
     transparent
-  );
+  ) !important;
   transform: translateX(-100%);
   transition: transform 0.6s;
 }
 
 .projectCard:hover {
-  box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.10), 0 0 8px 1px var(--accent);
-  border-color: var(--accent);
+  box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.10), 0 0 8px 1px var(--accent) !important;
+  border-color: var(--accent) !important;
+  background-color: var(--background) !important;
+  background: var(--background) !important;
   z-index: 2;
 }
 
@@ -108,17 +111,17 @@
 }
 
 .projectTitle {
-  font-size: var(--fontSizeXL);
-  font-weight: var(--fontWeightBold);
-  margin-bottom: var(--spaceS);
-  color: var(--text);
+  font-size: var(--fontSizeXL) !important;
+  font-weight: var(--fontWeightBold) !important;
+  margin-bottom: var(--spaceS) !important;
+  color: var(--text) !important;
 }
 
 .projectDescription {
-  font-size: var(--fontSizeM);
-  color: var(--textSecondary);
-  margin-bottom: var(--spaceM);
-  line-height: 1.6;
+  font-size: var(--fontSizeM) !important;
+  color: var(--textBody) !important;
+  margin-bottom: var(--spaceM) !important;
+  line-height: 1.6 !important;
 }
 
 .projectTechnologies {
@@ -129,20 +132,20 @@
 }
 
 .technologyTag {
-  background-color: color-mix(in srgb, var(--accent) 10%, transparent);
-  color: var(--accent);
-  font-size: var(--fontSizeS);
-  padding: var(--spaceXS) var(--spaceS);
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+  background-color: color-mix(in srgb, var(--accent) 10%, transparent) !important;
+  color: var(--accent) !important;
+  font-size: var(--fontSizeS) !important;
+  padding: var(--spaceXS) var(--spaceS) !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent) !important;
 }
 
 .technologyTag:hover {
-  transform: translateY(-2px);
-  background-color: color-mix(in srgb, var(--accent) 15%, transparent);
-  border-color: var(--accent);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px) !important;
+  background-color: color-mix(in srgb, var(--accent) 15%, transparent) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
 }
 
 /* Animations */
@@ -246,28 +249,28 @@
 }
 
 .viewProjectButton {
-  display: inline-block;
-  margin-top: var(--spaceM);
-  padding: var(--spaceS) var(--spaceL);
-  background: color-mix(in srgb, var(--accent) 10%, transparent);
-  color: var(--accent);
-  font-weight: var(--fontWeightMedium);
-  border: 1.5px solid color-mix(in srgb, var(--accent) 30%, transparent);
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: var(--fontSizeM);
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  transition: background 0.4s, color 0.4s, box-shadow 0.4s, border-color 0.4s;
-  letter-spacing: 0.02em;
-  outline: none;
+  display: inline-block !important;
+  margin-top: var(--spaceM) !important;
+  padding: var(--spaceS) var(--spaceL) !important;
+  background: color-mix(in srgb, var(--accent) 10%, transparent) !important;
+  color: var(--accent) !important;
+  font-weight: var(--fontWeightMedium) !important;
+  border: 1.5px solid color-mix(in srgb, var(--accent) 30%, transparent) !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  font-size: var(--fontSizeM) !important;
+  cursor: pointer !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+  transition: background 0.4s, color 0.4s, box-shadow 0.4s, border-color 0.4s !important;
+  letter-spacing: 0.02em !important;
+  outline: none !important;
 }
 
 .viewProjectButton:hover, .viewProjectButton:focus {
-  background: color-mix(in srgb, var(--accent) 20%, transparent);
-  color: #fff;
-  border-color: var(--accent);
-  box-shadow: 0 4px 16px 0 color-mix(in srgb, var(--accent) 20%, transparent);
+  background: color-mix(in srgb, var(--accent) 20%, transparent) !important;
+  color: var(--text) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 4px 16px 0 color-mix(in srgb, var(--accent) 20%, transparent) !important;
 }
 
 .dark .viewProjectButton {
