@@ -63,6 +63,9 @@
   .logoImage {
     width: var(--space2XL);
     height: auto;
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
   }
 
   .navDesktop {

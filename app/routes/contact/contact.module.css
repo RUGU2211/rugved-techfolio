@@ -353,23 +353,14 @@
   }
 
   .contactContent {
+    max-width: 350px;
     width: 100%;
-    max-width: 500px;
-    margin-top: var(--spaceL);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spaceL);
-    background-color: var(--backgroundSecondary);
-    padding: var(--space4XL) var(--space3XL);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    position: relative;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out forwards;
-    animation-delay: 0.4s;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0 auto;
+    padding: var(--spaceL) var(--spaceM);
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    background: var(--backgroundSecondary);
+    overflow: auto;
   }
 
   .contactContent::before {
@@ -599,12 +590,8 @@
       padding: var(--spaceL) 0;
     }
     .contactContent {
-      padding: var(--spaceM);
-      border-radius: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-      background: var(--backgroundSecondary);
       max-width: 95vw;
-      margin: 0 auto;
+      padding: var(--spaceM) var(--spaceS);
     }
     .contactForm {
       max-width: 100%;
