@@ -353,7 +353,8 @@
   }
 
   .contactContent {
-    max-width: 350px;
+    box-sizing: border-box;
+    max-width: 320px;
     width: 100%;
     margin: 0 auto;
     padding: var(--spaceL) var(--spaceM);
@@ -361,6 +362,10 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     background: var(--backgroundSecondary);
     overflow: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    will-change: opacity, transform;
+    animation: fadeInSlideUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 
   .contactContent::before {
@@ -620,4 +625,8 @@
 .dark .contactContent:hover {
   box-shadow: 0 8px 24px 0 rgba(0,0,0,0.5), 0 0 12px 2px var(--accent);
   border-color: var(--accent);
+}
+
+:global(body) {
+  overflow-x: hidden;
 }
