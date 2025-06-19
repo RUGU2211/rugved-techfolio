@@ -104,6 +104,8 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
                 </div>
               </Heading>
             </header>
+            {/* Removed the mouse scroll indicator for desktop */}
+            {/*
             <RouterLink
               to="/#project-1"
               className={styles.scrollIndicator}
@@ -113,6 +115,7 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
             >
               <VisuallyHidden>Scroll to projects</VisuallyHidden>
             </RouterLink>
+            */}
             <RouterLink
               to="/#project-1"
               className={styles.mobileScrollIndicator}

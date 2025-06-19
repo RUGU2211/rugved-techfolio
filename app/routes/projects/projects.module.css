@@ -50,8 +50,8 @@
   flex-direction: column !important;
   background-color: var(--background) !important;
   background: var(--background) !important;
-  padding: var(--spaceL) !important;
-  border-radius: 12px !important;
+  padding: var(--spaceM) !important;
+  border-radius: 10px !important;
   border: 1px solid var(--colorTextInputBorder) !important;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
   text-decoration: none !important;
@@ -63,6 +63,11 @@
   position: relative;
   overflow: hidden;
   padding-bottom: var(--spaceL);
+  box-sizing: border-box;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fontSizeL) !important;
 }
 
 .projectCard::before {
@@ -111,17 +116,21 @@
 }
 
 .projectTitle {
-  font-size: var(--fontSizeXL) !important;
+  font-size: 1.1rem !important;
   font-weight: var(--fontWeightBold) !important;
   margin-bottom: var(--spaceS) !important;
   color: var(--text) !important;
+  overflow-wrap: anywhere;
+  text-align: center;
 }
 
 .projectDescription {
-  font-size: var(--fontSizeM) !important;
+  font-size: 0.98rem !important;
   color: var(--textBody) !important;
   margin-bottom: var(--spaceM) !important;
   line-height: 1.6 !important;
+  overflow-wrap: anywhere;
+  text-align: center;
 }
 
 .projectTechnologies {
@@ -191,26 +200,24 @@
     max-width: 100vw;
     margin: 0 auto;
     padding: 0 8px;
+    overflow-x: hidden;
   }
   .projectCard {
-    min-height: 140px;
+    padding: 8px !important;
+    border-radius: 8px !important;
+    font-size: 0.95rem !important;
     width: 100%;
-    padding: 16px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+    max-width: 100%;
     margin: 0 auto;
     text-align: center;
-    gap: 8px;
-    transition: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
   }
-  .projectTitle, .projectDescription, .projectTechnologies {
-    text-align: center;
-    width: 100%;
+  .projectTitle {
+    font-size: 1rem !important;
+  }
+  .projectDescription {
+    font-size: 0.92rem !important;
   }
   .projectCard:hover, .projectCard:active {
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);

@@ -39,7 +39,7 @@
   margin-top: var(--spaceL);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spaceL);
+  gap: var(--spaceXL);
 }
 
 .category {
@@ -168,7 +168,7 @@
   }
 
   .certificationCategories {
-    gap: var(--spaceM);
+    gap: var(--spaceL);
     grid-template-columns: 1fr;
   }
 
@@ -191,6 +191,12 @@
   .certificateItem::before {
     left: -4px;
   }
+
+  .certificationCard {
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -204,7 +210,7 @@
   }
 
   .certificationCategories {
-    gap: var(--spaceS);
+    gap: var(--spaceM);
   }
 
   .category {
@@ -219,4 +225,10 @@
     font-size: var(--fontSizeXS);
     padding-left: var(--spaceS);
   }
+}
+
+.certificationCard {
+  padding: var(--spaceM);
+  border-radius: 10px;
+  font-size: var(--fontSizeL);
 } 
