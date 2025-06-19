@@ -178,40 +178,45 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .projectsPage {
-    padding: var(--space2XL) var(--spaceL);
+    padding: 16px 0 32px 0;
+    min-height: 100dvh;
+    width: 100vw;
+    overflow-x: hidden;
   }
-
-  .sectionHeading {
-    font-size: var(--fontSize4XL);
+  .projectGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0 8px;
+  }
+  .projectCard {
+    min-height: 140px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+    gap: 8px;
+    transition: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .projectTitle, .projectDescription, .projectTechnologies {
     text-align: center;
     width: 100%;
   }
-
-  .sectionHeading::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .projectGrid {
-    gap: var(--spaceM);
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-
-  .projectCard {
-    padding: var(--spaceM);
-  }
-
-  .projectTitle {
-    font-size: var(--fontSizeL);
-  }
-
-  .projectDescription {
-    font-size: var(--fontSizeS);
-  }
-
-  .technologyTag {
-    font-size: var(--fontSizeXS);
-    padding: var(--spaceXS) var(--spaceS);
+  .projectCard:hover, .projectCard:active {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border-color: var(--colorTextInputBorder);
+    background: var(--background);
+    transform: none;
   }
 }
 

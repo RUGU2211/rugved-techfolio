@@ -57,11 +57,8 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
-  const windowSize = useWindowSize();
-  const isMobile = windowSize.width <= 768;
 
   useEffect(() => {
-    if (isMobile) return;
     const sections = [intro, projectOne, projectTwo, projectThree];
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -90,15 +87,7 @@ export const Home = () => {
       sectionObserver.disconnect();
       indicatorObserver.disconnect();
     };
-  }, [visibleSections, isMobile]);
-
-  if (isMobile) {
-    return (
-      <div className={styles.home}>
-        <Intro id="intro" sectionRef={intro} scrollIndicatorHidden={scrollIndicatorHidden} />
-      </div>
-    );
-  }
+  }, [visibleSections]);
 
   return (
     <div className={styles.home}>

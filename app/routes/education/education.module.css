@@ -103,24 +103,37 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
+  @media (max-width: 480px) {
+    .educationEntryCard {
+      min-height: 120px;
+      padding: var(--spaceS);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
   @media (max-width: 768px) {
     .educationEntries {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0 auto;
+      padding: 0 8px;
     }
     .educationEntryCard {
-      min-height: 140px;
-      height: 100%;
-      flex-direction: column;
-      align-items: stretch;
-      gap: var(--spaceS);
-      padding: var(--spaceM);
+      min-height: 120px;
+      width: 100%;
+      padding: 16px;
       border-radius: 12px;
-      border: 1px solid var(--colorTextInputBorder);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-      animation: fadeInPopUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      margin: 0 auto;
+      text-align: center;
+      gap: 8px;
     }
     .educationDetails {
       align-items: center;
@@ -131,13 +144,12 @@
       text-align: center;
       width: 100%;
     }
-  }
-
-  @media (max-width: 480px) {
-    .educationEntryCard {
-      min-height: 120px;
-      padding: var(--spaceS);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    .dates {
+      text-align: center;
+      margin: 0;
+      width: 100%;
+      font-size: 1rem;
+      color: var(--textLight);
     }
   }
 
