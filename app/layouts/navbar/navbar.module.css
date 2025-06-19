@@ -25,10 +25,15 @@
       min-height: 56px;
       align-items: center;
       justify-content: flex-start;
-      padding: 0 var(--spaceL);
-      box-sizing: border-box;
-      background: var(--background);
+      padding: 0;
+      background: transparent !important;
       gap: var(--spaceM);
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: auto !important;
     }
 
     @media (--mediaMobile), (--mediaMobileLS) {
