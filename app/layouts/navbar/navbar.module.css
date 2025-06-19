@@ -21,15 +21,17 @@
       --headerNavFontSize: calc((22 / 16) * 1rem);
       flex-direction: row;
       width: 100%;
-      height: var(--space2XL);
+      height: 56px;
+      min-height: 56px;
       top: 0;
       left: 0;
       right: 0;
       bottom: auto;
-      padding: 0 var(--spaceL);
+      padding: var(--spaceS) var(--spaceL);
       justify-content: space-between;
       align-items: center;
       border-radius: 0;
+      box-sizing: border-box;
     }
 
     @media (--mediaMobile), (--mediaMobileLS) {
@@ -46,6 +48,8 @@
     transition: transform var(--durationM) var(--bezierFastoutSlowin);
     width: 100%;
     justify-content: flex-start;
+    margin-top: 0;
+    overflow: visible;
 
     &:hover {
       transform: scale(1.05);
@@ -56,7 +60,7 @@
       align-items: center;
       width: auto;
       justify-content: flex-start;
-      margin-top: var(--space2XL);
+      margin-top: 0;
       overflow: visible;
     }
   }
@@ -67,9 +71,17 @@
     max-width: 100%;
     max-height: 56px;
     object-fit: contain;
+    margin: 0;
 
     @media (--mediaMobile) {
-      width: var(--space2XL);
+      width: 48px;
+      max-width: 48px;
+      max-height: 48px;
+      padding: 4px 0;
+      margin: 0;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: none;
     }
   }
 
