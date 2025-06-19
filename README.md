@@ -1,26 +1,33 @@
+Here’s a modernized and project-specific `README.md` for your portfolio, following your requested structure and reflecting your actual stack, deployment, and features:
+
+---
+
 # 📌 Rugved Techfolio
 
-A **modern, responsive portfolio website** to showcase my projects, skills, and experience — built using **Remix**, **React**, and robust backend technologies.
+A **modern, responsive portfolio website** to showcase my projects, skills, and experience — built with **Remix**, **React**, and deployed on **Cloudflare Pages**.
 
 ---
 
 ## 🚀 Features
 
- ✅ **Responsive Design** — Works beautifully on mobile, tablet, and desktop.
- ✅ **Theme Toggle** — Light and dark mode for user preference.
- ✅ **Project Gallery** — Clean layout to highlight projects with descriptions and tech stacks.
- ✅ **Smooth Interactions** — Subtle animations and transitions for an engaging experience.
+- ✅ **Fully Responsive** — Optimized for mobile, tablet, and desktop.
+- ✅ **Theme Toggle** — Seamless light/dark mode switch.
+- ✅ **Project Gallery** — Visually rich project cards with images, descriptions, and tech stacks.
+- ✅ **Animated UI** — Smooth transitions and interactive elements for an engaging user experience.
+- ✅ **Contact Form** — Direct email integration for easy communication.
+- ✅ **Education & Skills** — Dedicated sections for academic background and technical expertise.
+- ✅ **Custom Domain** — Live at [rugved-techfolio.com](https://rugved-techfolio.com)
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer          | Technologies              |
-| -------------- | ------------------------- |
-| **Frontend**   | Remix, React, CSS Modules |
-| **Backend**    | Node.js, Spring Boot      |
-| **Database**   | MongoDB                   |
-| **Deployment** | GitHub Pages              |
+| Layer          | Technologies                        |
+| -------------- | ----------------------------------- |
+| **Frontend**   | Remix, React, CSS Modules           |
+| **Backend**    | (Static/Serverless via Cloudflare)  |
+| **Email**      | EmailJS (Contact Form)              |
+| **Deployment** | Cloudflare Pages, GitHub Actions    |
 
 ---
 
@@ -50,16 +57,26 @@ npm install
 npm run dev
 ```
 
-5️⃣ **Open in browser**
+5️⃣ **Open in your browser**
+
 Visit [http://localhost:3000](http://localhost:3000)
 
 ---
 
 ## 💡 Usage
 
-* Browse your portfolio at `localhost:3000` while developing.
-* Use the **theme toggle button** to switch between light and dark modes.
-* Update your project data in the source code to showcase your latest work.
+- Browse your portfolio at `localhost:3000` during development.
+- Use the **theme toggle** in the navbar to switch between light and dark modes.
+- Update your project, education, and skills data in the source files to keep your portfolio current.
+- The contact form sends messages directly to your email via EmailJS.
+
+---
+
+## 🌐 Deployment
+
+- **Production:** [rugved-techfolio.com](https://rugved-techfolio.com)
+- **Platform:** Cloudflare Pages (auto-deploys from `main` branch)
+- **Custom Domain:** Configured via Cloudflare DNS
 
 ---
 
@@ -69,8 +86,8 @@ Pull requests and suggestions are welcome!
 
 1. Fork the repo
 2. Create your branch (`git checkout -b feature/YourFeature`)
-3. Commit changes (`git commit -m 'Add new feature'`)
-4. Push to the branch (`git push origin feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to your branch (`git push origin feature/YourFeature`)
 5. Open a Pull Request
 
 ---
@@ -83,9 +100,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📬 Contact
 
-**Rugved Kharde**
-🌐 [Website](https://rugvedkharde.com)
+**Rugved Kharde**  
+🌐 [Portfolio](https://rugved-techfolio.com)  
 💼 [LinkedIn](https://linkedin.com/in/rugved-kharde-814b89282)
 
 ---
-
