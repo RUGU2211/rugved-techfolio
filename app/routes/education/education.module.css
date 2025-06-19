@@ -10,17 +10,22 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    height: 100%; /* Set a fixed height to prevent upward movement */
+    height: 100%;
+    grid-template-columns: 1fr;
   }
 
   .educationEntryCard {
+    min-height: 160px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     background-color: var(--backgroundSecondary);
     padding: var(--spaceL);
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     border: 1px solid var(--colorTextInputBorder);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -99,23 +104,40 @@
   }
 
   @media (max-width: 768px) {
+    .educationEntries {
+      grid-template-columns: 1fr;
+    }
     .educationEntryCard {
-      min-width: 240px;
-      min-height: 120px;
-      box-sizing: border-box;
+      min-height: 140px;
+      height: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      gap: var(--spaceS);
+      padding: var(--spaceM);
+      border-radius: 12px;
+      border: 1px solid var(--colorTextInputBorder);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      animation: fadeInPopUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
-    .institutionName {
-      font-size: var(--fontSizeM);
+    .educationDetails {
+      align-items: center;
+      text-align: center;
+      width: 100%;
     }
-    .degree, .grade, .dates {
-      font-size: var(--fontSizeS);
+    .institutionName, .degree, .grade {
+      text-align: center;
+      width: 100%;
     }
   }
 
   @media (max-width: 480px) {
     .educationEntryCard {
-      min-width: 180px;
-      min-height: 100px;
+      min-height: 120px;
+      padding: var(--spaceS);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 
