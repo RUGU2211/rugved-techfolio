@@ -596,74 +596,32 @@
 
   @media (max-width: 480px) {
     .contactPage {
-      padding: var(--spaceXL) var(--spaceM);
+      padding: var(--spaceL) 0;
     }
-
-    .sectionHeading {
-      font-size: var(--fontSize3XL);
-      margin-bottom: var(--spaceXL);
-    }
-
     .contactContent {
+      padding: var(--spaceM);
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      background: var(--backgroundSecondary);
+      max-width: 95vw;
+      margin: 0 auto;
+    }
+    .contactForm {
       max-width: 100%;
-      padding: var(--spaceXL) var(--spaceS);
-      gap: var(--spaceS);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: var(--spaceM) 0;
     }
-
-    .contactContent::before {
-      transition: transform 0.6s;
-    }
-
-    .contactContent:hover {
-      transform: translateY(-1px) scale(1.002);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    }
-
-    .contactContent:hover::before {
-      transform: translateX(100%);
-    }
-
-    .contactText {
-      font-size: var(--fontSizeS);
-      margin-bottom: var(--spaceS);
-    }
-
     .formGroup {
-      gap: var(--spaceXS);
-      animation-delay: 0.3s !important;
+      margin-bottom: var(--spaceM);
     }
-
-    .formLabel {
-      font-size: var(--fontSizeXS);
+    .formInput, .formTextarea {
+      font-size: 1rem;
+      padding: var(--spaceS);
+      border-radius: 8px;
     }
-
-    .formInput,
-    .formTextarea {
-      padding: var(--spaceXS);
-      font-size: var(--fontSizeS);
-    }
-
-    .formInput:focus,
-    .formTextarea:focus {
-      background-color: color-mix(in srgb, var(--accent) 6%, transparent);
-    }
-
-    .formTextarea {
-      border: 1px solid var(--colorTextInputBorder);
-      padding: var(--spaceXS);
-      min-height: 60px;
-    }
-
     .submitButton {
-      margin-top: var(--spaceS);
-      font-size: var(--fontSizeS);
-      animation-delay: 0.6s !important;
-    }
-
-    .successMessage,
-    .errorMessage {
-      font-size: var(--fontSizeXS);
+      font-size: 1rem;
+      padding: var(--spaceS) var(--spaceL);
+      border-radius: 8px;
     }
   }
 }

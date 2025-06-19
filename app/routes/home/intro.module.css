@@ -1,5 +1,5 @@
 .intro {
-  min-height: 100dvh;
+  min-height: clamp(500px, 100dvh, 1000px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,6 +7,8 @@
   box-sizing: border-box;
   width: 100%;
   position: relative;
+  padding-top: var(--space2XL);
+  padding-bottom: var(--space2XL);
 
   @media (--mediaMobile) {
     padding-top: var(--space2XL);
@@ -20,6 +22,8 @@
   position: relative;
   box-sizing: border-box;
   top: 0;
+  padding-left: var(--spaceL);
+  padding-right: var(--spaceL);
 
   @media (--mediaDesktop) {
     max-width: 920px;
@@ -68,7 +72,7 @@
   @media (--mediaMobile) {
     font-size: calc((20 / 16) * 1rem);
     margin-bottom: var(--spaceL);
-    margin-top: var(--space4XL);
+    margin-top: 0;
     letter-spacing: 0.12em;
     white-space: nowrap;
     overflow: hidden;
@@ -371,8 +375,12 @@
 
 /* Ensure DisplacementSphere canvas always covers background */
 .canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   object-fit: cover;
   z-index: 0;
+  pointer-events: none;
 }

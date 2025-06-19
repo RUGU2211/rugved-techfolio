@@ -32,7 +32,7 @@ const springConfig = {
 export const DisplacementSphere = props => {
   if (typeof window === 'undefined') return null;
   const { theme } = useTheme();
-  const start = useRef(Date.now());
+  const start = useRef(0);
   const canvasRef = useRef();
   const mouse = useRef();
   const renderer = useRef();
@@ -80,6 +80,7 @@ export const DisplacementSphere = props => {
       shader.fragmentShader = fragmentShader;
     };
 
+    start.current = Date.now();
     startTransition(() => {
       geometry.current = new SphereGeometry(32, 32, 32);
       sphere.current = new Mesh(geometry.current, material.current);
