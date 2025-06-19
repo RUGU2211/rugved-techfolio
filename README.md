@@ -57,7 +57,7 @@ npm run dev
 
 5️⃣ **Open in your browser**
 
-Visit [http://localhost:3000](http://localhost:3000)
+Visit [http://localhost:3000](http://localhost:7777)
 
 ---
 
