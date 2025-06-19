@@ -141,17 +141,45 @@ export const DisplacementSphere = props => {
         x: event.clientX / window.innerWidth,
         y: event.clientY / window.innerHeight,
       };
-
       rotationX.set(position.y / 2);
       rotationY.set(position.x / 2);
     }, 100);
 
+    // Touch support for move
+    const onTouchMove = throttle(event => {
+      if (event.touches && event.touches.length > 0) {
+        const touch = event.touches[0];
+        const position = {
+          x: touch.clientX / window.innerWidth,
+          y: touch.clientY / window.innerHeight,
+        };
+        rotationX.set(position.y / 2);
+        rotationY.set(position.x / 2);
+      }
+    }, 100);
+
+    // Touch support for tap/press (simulate hover)
+    const onTouchStart = () => {
+      rotationX.set(0.25);
+      rotationY.set(0.25);
+    };
+    const onTouchEnd = () => {
+      rotationX.set(0);
+      rotationY.set(0);
+    };
+
     if (!reduceMotion && isInViewport) {
       window.addEventListener('mousemove', onMouseMove);
+      window.addEventListener('touchmove', onTouchMove);
+      window.addEventListener('touchstart', onTouchStart);
+      window.addEventListener('touchend', onTouchEnd);
     }
 
     return () => {
       window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('touchmove', onTouchMove);
+      window.removeEventListener('touchstart', onTouchStart);
+      window.removeEventListener('touchend', onTouchEnd);
     };
   }, [isInViewport, reduceMotion, rotationX, rotationY]);
 

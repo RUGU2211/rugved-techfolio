@@ -112,6 +112,11 @@ export const Navbar = () => {
     };
   }, [theme, windowSize, location.key]);
 
+  // Close menu on theme change
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [theme]);
+
   // Check if a nav item should be active
   const getCurrent = (url = '') => {
     const nonTrailing = current?.endsWith('/') ? current?.slice(0, -1) : current;
