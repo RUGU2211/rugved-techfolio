@@ -62,10 +62,10 @@
   }
 
   .logoImage {
-    width: var(--space2XL);
-    height: auto;
     display: block;
+    width: auto;
     max-width: 100%;
+    max-height: 56px;
     object-fit: contain;
 
     @media (--mediaMobile) {
@@ -299,6 +299,12 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @media (--mediaMobile) {
+    main, .mainContent, .pageContent, .content, .section, .contactPage {
+      margin-top: var(--space3XL);
     }
   }
 }
