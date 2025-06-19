@@ -30,6 +30,7 @@ const springConfig = {
 };
 
 export const DisplacementSphere = props => {
+  if (typeof window === 'undefined') return null;
   const { theme } = useTheme();
   const start = useRef(Date.now());
   const canvasRef = useRef();
@@ -80,7 +81,7 @@ export const DisplacementSphere = props => {
     };
 
     startTransition(() => {
-      geometry.current = new SphereGeometry(32, 128, 128);
+      geometry.current = new SphereGeometry(32, 32, 32);
       sphere.current = new Mesh(geometry.current, material.current);
       sphere.current.position.z = 0;
       sphere.current.modifier = Math.random();
