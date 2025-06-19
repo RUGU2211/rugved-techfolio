@@ -1,5 +1,3 @@
-Here’s a modernized and project-specific `README.md` for your portfolio, following your requested structure and reflecting your actual stack, deployment, and features:
-
 ---
 
 # 📌 Rugved Techfolio
