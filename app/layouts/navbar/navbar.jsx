@@ -179,6 +179,7 @@ export const Navbar = () => {
           <NavbarIcons desktop />
         </nav>
       )}
+      {!isMobile && <ThemeToggle data-navbar-item />}
       <Transition unmount in={menuOpen} timeout={msToNum(tokens.base.durationL)}>
         {({ visible, nodeRef }) => (
           <nav className={styles.mobileNav} data-visible={visible} ref={nodeRef}>
@@ -206,7 +207,6 @@ export const Navbar = () => {
           </nav>
         )}
       </Transition>
-      {!isMobile && <ThemeToggle data-navbar-item />}
     </header>
   );
 };
