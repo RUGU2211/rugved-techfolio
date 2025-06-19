@@ -1,5 +1,4 @@
 .intro {
-  height: 100vh;
   min-height: 100svh;
   display: flex;
   align-items: center;
@@ -16,7 +15,7 @@
   max-width: 1024px;
   width: 100%;
   position: relative;
-  top: calc(var(--spaceL) * -1);
+  top: 0;
 
   @media (--mediaDesktop) {
     max-width: 920px;
@@ -61,6 +60,7 @@
   }
 
   @media (--mediaMobile) {
+    font-size: calc((28 / 16) * 1rem);
     margin-bottom: var(--spaceM);
     margin-top: var(--spaceXL);
     letter-spacing: 0.15em;
@@ -360,4 +360,15 @@
   &:focus-visible {
     opacity: 1;
   }
+}
+
+/* Ensure DisplacementSphere canvas always covers background */
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
 }
