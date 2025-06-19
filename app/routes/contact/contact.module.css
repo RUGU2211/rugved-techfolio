@@ -354,10 +354,10 @@
 
   .contactContent {
     box-sizing: border-box;
-    max-width: 320px;
+    max-width: 500px;
     width: 100%;
     margin: 0 auto;
-    padding: var(--spaceL) var(--spaceM);
+    padding: var(--space2XL) var(--spaceXL);
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     background: var(--backgroundSecondary);
@@ -531,6 +531,7 @@
       padding: var(--space2XL) var(--spaceM);
       gap: var(--spaceM);
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: fadeInPopUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
 
     .contactContent::before {
@@ -595,8 +596,8 @@
       padding: var(--spaceL) 0;
     }
     .contactContent {
-      max-width: 95vw;
-      padding: var(--spaceM) var(--spaceS);
+      max-width: 98vw;
+      padding: var(--spaceL) var(--spaceM);
     }
     .contactForm {
       max-width: 100%;
@@ -629,4 +630,19 @@
 
 :global(body) {
   overflow-x: hidden;
+}
+
+@keyframes fadeInPopUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
