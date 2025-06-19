@@ -21,6 +21,7 @@ import { ProjectSummary } from './project-summary';
 import { useEffect, useRef, useState } from 'react';
 import config from '~/config.json';
 import styles from './home.module.css';
+import { useWindowSize } from '~/hooks';
 
 // Prefetch draco decoader wasm
 export const links = () => {
@@ -56,10 +57,12 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const windowSize = useWindowSize();
+  const isMobile = windowSize.width <= 768;
 
   useEffect(() => {
+    if (isMobile) return;
     const sections = [intro, projectOne, projectTwo, projectThree];
-
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach(entry => {
@@ -73,25 +76,29 @@ export const Home = () => {
       },
       { rootMargin: '0px 0px -10% 0px', threshold: 0.1 }
     );
-
     const indicatorObserver = new IntersectionObserver(
       ([entry]) => {
         setScrollIndicatorHidden(!entry.isIntersecting);
       },
       { rootMargin: '-100% 0px 0px 0px' }
     );
-
     sections.forEach(section => {
       sectionObserver.observe(section.current);
     });
-
     indicatorObserver.observe(intro.current);
-
     return () => {
       sectionObserver.disconnect();
       indicatorObserver.disconnect();
     };
-  }, [visibleSections]);
+  }, [visibleSections, isMobile]);
+
+  if (isMobile) {
+    return (
+      <div className={styles.home}>
+        <Intro id="intro" sectionRef={intro} scrollIndicatorHidden={scrollIndicatorHidden} />
+      </div>
+    );
+  }
 
   return (
     <div className={styles.home}>

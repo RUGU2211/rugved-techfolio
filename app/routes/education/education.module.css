@@ -100,9 +100,9 @@
 
   @media (max-width: 768px) {
     .educationEntryCard {
-      padding: var(--spaceS);
-      border-radius: 8px;
-      gap: var(--spaceXS);
+      min-width: 240px;
+      min-height: 120px;
+      box-sizing: border-box;
     }
     .institutionName {
       font-size: var(--fontSizeM);
@@ -114,8 +114,8 @@
 
   @media (max-width: 480px) {
     .educationEntryCard {
-      padding: var(--spaceXS);
-      border-radius: 6px;
+      min-width: 180px;
+      min-height: 100px;
     }
   }
 
