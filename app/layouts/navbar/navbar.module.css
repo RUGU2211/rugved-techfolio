@@ -57,6 +57,7 @@
       width: auto;
       justify-content: flex-start;
       margin-top: var(--space2XL);
+      overflow: visible;
     }
   }
 
@@ -66,6 +67,10 @@
     display: block;
     max-width: 100%;
     object-fit: contain;
+
+    @media (--mediaMobile) {
+      width: var(--space2XL);
+    }
   }
 
   .navDesktop {
