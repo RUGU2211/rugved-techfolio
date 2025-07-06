@@ -13,7 +13,7 @@ export const meta = () => {
 const educationEntries = [
   {
     institution: 'SVKM\'S NMIMS Mukesh Patel, Mumbai',
-    degree: 'Master in Computer Application\nCGPA: 7.32/10',
+    degree: 'Master in Computer Application\nCGPA: 7.55/10',
     dates: '2024 - 2026',
   },
   {
