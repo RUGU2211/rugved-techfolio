@@ -49,7 +49,7 @@ export default function About() {
             </a>
           </div>
           <div className={styles.aboutImageColumn}>
-            <img src="/office-background-designify.png" alt="Rugved Manoj Kharde" className={styles.aboutImage} />
+            <img src="/profile-image.png" alt="Rugved Manoj Kharde" className={styles.aboutImage} />
           </div>
         </div>
       </Fragment>
